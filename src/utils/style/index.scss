@@ -1,0 +1,207 @@
+body {
+    margin: 3% 9%;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+
+    .navbar_nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 15%;
+
+        & a {
+            text-decoration: none;
+            color: #ff6060;
+
+            &:hover {
+                text-decoration: underline;
+            }
+            &.active {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.banner {
+    position: relative;
+    height: 223px;
+    margin: auto;
+    top: 1.5rem;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../assets/ImgBanner.png");
+    background-size: cover;
+    background-position: center;
+
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 1.5rem;
+        background: #000000;
+        mix-blend-mode: darken;
+        opacity: .3;
+    }
+
+    & h2 {
+        position: relative;
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 68.45px;
+        display: flex;
+        align-items: flex-end;
+        color: #FFFFFF;
+    }
+}
+
+.card {
+    position: relative;
+    padding: 3rem;
+    padding-bottom: .5rem;
+    margin: 3.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    background: #F7F7F7;
+    border-radius: 1rem;
+
+    .card_apartement {
+        position: relative;
+        border-radius: 1.5rem;
+        margin: 1.19rem;
+        width: 30%;
+        display: flex;
+        align-items: flex-end;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 1rem;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);;
+            mix-blend-mode: darken;
+            opacity: .8;
+            height: 230px;
+        }
+
+        .card_apart_name {
+            position: absolute;
+            width: 50%;
+            margin-top: -14%;
+            margin-left: 5%;
+            color: white;
+            font-size: 16px;
+        }
+
+        & img {
+            width: 345px;
+            height: 230px;
+            object-fit: cover;
+            border-radius: 1rem;
+        }
+
+        & a {
+            text-decoration: none;
+        }
+    }    
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+
+    .footer_logo {
+        margin-bottom: 1.5rem;
+    }
+}
+
+
+.apartment {
+    color: #ff6060;
+    .apartment_title {
+        display: flex;
+        justify-content: space-between;
+
+        .apartment_name {
+            width: 40%;
+
+            .apartment_tags {
+                display: flex;
+                justify-content: space-between;
+                width: 55%;
+
+                .tag {
+                    background-color: #ff6060;
+                    color: white;
+                    padding: 3% 8%;
+                    border-radius: .7rem;
+                    text-align: center;
+                }
+            }
+        }
+
+        .apartment_owner {
+            .apartment_stars {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.2rem;
+                color: #F7F7F7;
+                
+                .full {
+                    color: #ff6060;
+                }
+            }
+        }
+    }
+
+    .apartment_description {
+        display: flex;
+        justify-content: space-between;
+
+        .apartment_utils {
+            width: 45%;
+        }
+    }
+}
+
+.apartment_utils_title {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6060;
+    color: #FFFFFF;
+    border-radius: .5rem;
+    padding: 0 4%;            
+}
+
+.apartment_utils_text {
+    padding: 8% 4% 5% 4%;
+    background-color: #F7F7F7;;
+    border-radius: 1rem;
+    position: relative;
+    z-index: -1;
+    margin-top: -5%;
+    
+}
+
+.about_img {
+    & img {
+        border-radius: 1.5rem;
+    }
+}
+.about_dropdown {
+    width: 75%;
+    margin: auto;
+}

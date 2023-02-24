@@ -15,8 +15,8 @@ function CardOfApartments() {
     
     return (
         <div className="card">
-            {aparts.map((apart) => (
-                <Apartement title={apart.title} imgUrl={apart.cover} id={apart.id}/>
+            {aparts.map((apart, i) => (
+                <Apartement title={apart.title} imgUrl={apart.cover} id={apart.id} key={i}/>
             ))}
         </div>
     )

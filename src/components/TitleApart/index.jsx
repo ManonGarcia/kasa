@@ -7,7 +7,7 @@ function ApartTitle(props) {
                 <h1>{props.apart.title}</h1>
                 <p>{props.apart.location}</p>
                 <div className="apartment_tags">
-                    {props.apart.tags.map((tag) => (<p className="tag">{tag}</p>))}
+                    {props.apart.tags.map((tag) => (<p key={tag} className="tag">{tag}</p>))}
                 </div>
             </div>
 

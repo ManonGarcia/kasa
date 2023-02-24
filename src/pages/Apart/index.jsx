@@ -19,16 +19,20 @@ function Apartment() {
             .catch(console.error);
     }
 
-    if(apart == null) return <div>...Loading</div>;
+    if(apart == null) return (
+        <div class="spinner">
+            <div></div><div></div><div></div><div></div><div></div>
+        </div>
+    );
     
     return (
         <div className="apartment">
-            <ApartBanner imgUrl={apart.cover} />
+            <ApartBanner pictures={apart.pictures} />
             <ApartTitle apart={apart} />
             
             <div className="apartment_description">
                 <Dropdown title="Description" content={apart.description}/>
-                <Dropdown title="Equipements" content={apart.equipments.map(equipment => <li>{equipment}</li>)}/>
+                <Dropdown title="Equipements" content={apart.equipments.map((equipment, i) => <li key={i}>{equipment}</li>)}/>
             </div>
         </div>
     )

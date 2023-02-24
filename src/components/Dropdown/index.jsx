@@ -1,14 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Dropdown(props) {
+    const [dropdownVisible, setDropdownVisible] = useState(false);
+    const viewContent = () => {
+        setDropdownVisible(!dropdownVisible);
+    };
+    const dropdown = dropdownVisible ? "apartment_utils_text open" : "apartment_utils_text close";
+    const chevron = dropdownVisible ? "fa-solid fa-chevron-up" : "fa-solid fa-chevron-down";
+    
     return (
         <div className="apartment_utils">
-            <div className="apartment_utils_title">
+            <div className="apartment_utils_title" onClick={viewContent}>
                 <h4>{props.title}</h4>
-                <i className="fa-solid fa-chevron-up"></i>
+                <i className={chevron}></i>
             </div>
 
-            <p className="apartment_utils_text">{props.content}</p>
+            <p className={dropdown}>{props.content}</p>
         </div>
     )
 };

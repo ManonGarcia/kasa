@@ -29,11 +29,11 @@ const Router = createBrowserRouter([
             },
             {
                 path: "/apart",
-                element: <Apart/>
+                element: <Apart/>,
             },
             {
                 path: "/about",
-                element: <About />
+                element: <About />,
             }
         ]
     }

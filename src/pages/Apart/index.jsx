@@ -2,10 +2,14 @@ import React, { useEffect, useState } from "react";
 import Dropdown from "../../components/Dropdown";
 import ApartBanner from "../../components/Banner/apartBanner";
 import ApartTitle from "../../components/TitleApart";
-import { useLocation } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 
 function Apartment() {
     const location = useLocation();
+
+    
+
+
     const [apart, setApart] = useState(null);
     useEffect(fetchDataApart, []);
 

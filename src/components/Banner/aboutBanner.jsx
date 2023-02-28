@@ -1,7 +1,7 @@
 import React from "react";
 import BannerAbout from "../../assets/BannerAbout.png"
 
-function AboutBanner(props) {
+function AboutBanner() {
     return (
         <div className="about_img">
             <img src={ BannerAbout } alt="Banner" />

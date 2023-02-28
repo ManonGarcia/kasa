@@ -2,28 +2,29 @@ import React, { useEffect, useState } from "react";
 import Dropdown from "../../components/Dropdown";
 import ApartBanner from "../../components/Banner/apartBanner";
 import ApartTitle from "../../components/TitleApart";
-import { useLocation, useParams } from "react-router-dom";
+import Error from "../../components/Error";
+import { useParams } from "react-router-dom";
 
 function Apartment() {
-    const location = useLocation();
-
-    
-
-
+    const { id } = useParams();
     const [apart, setApart] = useState(null);
     useEffect(fetchDataApart, []);
 
     function fetchDataApart() {
-        fetch("logements.json")
+        fetch("../logements.json")
             .then((res) => res.json())
             .then((aparts) => {
-                const apart = aparts.find((apart) => apart.id === location.state.apartId);
+                const apart = aparts.find((apart) => apart.id === id);
                 setApart(apart);
             })
             .catch(console.error);
     }
 
-    if(apart == null) return (
+    if(apart === false) return (
+        <Error />
+    );
+
+    if(apart === null) return (
         <div class="spinner">
             <div></div><div></div><div></div><div></div><div></div>
         </div>

@@ -9,7 +9,7 @@ import Footer from "./layout/Footer";
 import Error from "./components/Error";
 import './utils/style/index.css';
 
-const HeaderFooterLayout = () => {
+const MainTemplate = () => {
     return (
         <div>
             <Header />
@@ -20,7 +20,7 @@ const HeaderFooterLayout = () => {
 };
 const Router = createBrowserRouter([
     {
-        element: <HeaderFooterLayout />,
+        element: <MainTemplate />,
         errorElement: <Error />,
         children: [
             {
@@ -28,7 +28,7 @@ const Router = createBrowserRouter([
                 element: <Home />,
             },
             {
-                path: "/apart",
+                path: "/apart/:id",
                 element: <Apart/>,
             },
             {

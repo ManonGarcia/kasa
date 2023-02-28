@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Dropdown(props) {
-    const [dropdownVisible, setDropdownVisible] = useState(false);
+    const [dropdownVisible, setDropdownVisible] = useState(true);
     const viewContent = () => {
         setDropdownVisible(!dropdownVisible);
     };
